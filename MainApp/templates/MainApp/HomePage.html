@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>WishList</title>
+</head>
+<body>
+
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
+
+{% block content %}
+    {% for post in object_list %}
+        <div class="card" style="width: 14rem;">
+        <div class="card-body">
+            <h5>{{ post.title }}</h5><br>
+                {{ post.price }}€<br>
+                {{ post.post }}<br>
+            <a href="{{ post.url }}" class="btn btn-secondary btn-xs"> <h3>Buy</h3></a><br>
+        </div>
+        </div>
+    {% endfor %}
+{% endblock %}
+
+
+</body>
+</html>
